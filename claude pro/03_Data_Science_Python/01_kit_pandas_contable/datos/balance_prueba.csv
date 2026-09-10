@@ -1,0 +1,31 @@
+codigo_puc,nombre_cuenta,naturaleza,saldo_inicial,debitos,creditos,saldo_final
+110505,Caja general,D,3500000.0,0.0,0.0,3500000.0
+111005,Banco Bogota cta corriente 123-456,D,185000000.0,362620000.0,116202000.0,431418000.0
+130505,Clientes nacionales,D,96400000.0,758917627.48,362620000.0,492697627.48
+135515,Retencion en la fuente a favor,D,0.0,15263050.0,0.0,15263050.0
+135517,Retencion de ICA a favor,D,0.0,5897642.52,0.0,5897642.52
+143530,Mercancias no fabricadas por la empresa,D,210000000.0,157296000.0,415041916.6,-47745916.6
+152405,Equipo de oficina,D,75000000.0,0.0,0.0,75000000.0
+159210,Depreciacion acumulada equipo de oficina,C,-18750000.0,0.0,3750000.0,-22500000.0
+220505,Proveedores nacionales,C,-84150000.0,109395000.0,181730360.64,-156485360.64
+233595,Costos y gastos por pagar,C,0.0,0.0,0.0,0.0
+236540,Retencion en la fuente por pagar,C,0.0,0.0,3932400.0,-3932400.0
+236805,Impuesto de industria y comercio retenido,C,0.0,0.0,1519479.36,-1519479.36
+237005,Aportes a entidades de seguridad social,C,0.0,0.0,15252000.0,-15252000.0
+240805,IVA generado,C,0.0,0.0,124550320.0,-124550320.0
+240810,IVA descontable,D,0.0,29886240.0,0.0,29886240.0
+250505,Salarios por pagar,C,0.0,0.0,74400000.0,-74400000.0
+310505,Capital suscrito y pagado,C,-300000000.0,0.0,0.0,-300000000.0
+360505,Utilidad del ejercicio,C,0.0,0.0,0.0,0.0
+370505,Utilidades acumuladas,C,-167000000.0,0.0,0.0,-167000000.0
+413595,Comercio al por mayor y menor,C,0.0,0.0,655528000.0,-655528000.0
+421005,Rendimientos financieros,C,0.0,0.0,0.0,0.0
+613595,Costo de venta de mercancias,D,0.0,415041916.6,0.0,415041916.6
+510506,Sueldos,D,0.0,74400000.0,0.0,74400000.0
+510568,"Aportes ARL, salud y pension",D,0.0,15252000.0,0.0,15252000.0
+513525,Servicios de energia,D,0.0,2264000.0,0.0,2264000.0
+513530,Servicios de telefono e internet,D,0.0,2905000.0,0.0,2905000.0
+513595,Otros servicios,D,0.0,1638000.0,0.0,1638000.0
+516010,Depreciacion equipo de oficina,D,0.0,3750000.0,0.0,3750000.0
+530525,Gastos bancarios,D,0.0,0.0,0.0,0.0
+531520,Gravamen a los movimientos financieros,D,0.0,0.0,0.0,0.0

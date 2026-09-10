@@ -1,0 +1,13 @@
+numero_factura,fecha,nit,proveedor,concepto,base_gravable,iva,declarante,gran_contribuyente,autorretenedor,regimen_simple,actividad_ica
+FE-1001,2026-03-02,890900608,ALIMENTOS NACIONALES S.A.,compras_generales_declarante,12500000,2375000,SI,NO,NO,NO,comercio_al_por_mayor_y_menor
+FE-1002,2026-03-03,900321654,LOGISTICA ANDINA S.A.S.,transporte_carga,3200000,608000,SI,NO,NO,NO,servicios_generales
+FE-1003,2026-03-05,79856321,CARLOS RAMIREZ (PN),honorarios_pn,4000000,0,SI,NO,NO,NO,servicios_generales
+FE-1004,2026-03-06,811004321,PAPELERIA CENTRAL SAS,compras_generales_declarante,180000,34200,SI,NO,NO,NO,comercio_al_por_mayor_y_menor
+FE-1005,2026-03-09,900777888,SERVICIOS INTEGRALES DEL ORIENTE SAS,vigilancia_y_aseo_aiu,2800000,532000,SI,NO,NO,NO,servicios_generales
+FE-1006,2026-03-11,830445566,MAYORISTA CASANARE S.A.S.,compras_generales_declarante,7400000,1406000,SI,SI,NO,NO,comercio_al_por_mayor_y_menor
+FE-1007,2026-03-13,52147896,MARTHA GOMEZ (PN),servicios_generales_declarante,1500000,285000,NO,NO,NO,NO,servicios_generales
+FE-1008,2026-03-16,901556677,COMERCIAL YOPAL SAS,arrendamiento_inmuebles,5000000,950000,SI,NO,NO,NO,servicios_generales
+FE-1009,2026-03-18,860002964,EMPAQUES Y PLASTICOS LTDA,compras_generales_declarante,9800000,1862000,SI,NO,SI,NO,comercio_al_por_mayor_y_menor
+FE-1010,2026-03-20,901998877,TIENDAS LA ESQUINA S.A.S.,compras_generales_declarante,6300000,1197000,SI,NO,NO,SI,comercio_al_por_mayor_y_menor
+FE-1011,2026-03-23,900112233,CONSTRUCTORA DEL LLANO SAS,contratos_construccion,45000000,8550000,SI,NO,NO,NO,construccion
+FE-1012,2026-03-25,900445599,HOTEL LA ARBOLEDA SAS,hoteles_restaurantes,2200000,418000,SI,NO,NO,NO,servicios_generales

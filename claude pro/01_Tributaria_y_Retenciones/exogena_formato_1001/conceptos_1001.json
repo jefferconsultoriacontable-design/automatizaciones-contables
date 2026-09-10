@@ -1,0 +1,28 @@
+{
+  "vigencia": "Ano gravable 2026 - verifique la resolucion DIAN vigente antes de presentar",
+  "descripcion": "Mapeo de cuentas PUC (por prefijo) al concepto del formato 1001 - pagos o abonos en cuenta y retenciones practicadas",
+  "mapeo_puc_concepto": {
+    "5105": {"concepto": "5001", "nombre": "Salarios, prestaciones y demas pagos laborales"},
+    "5110": {"concepto": "5002", "nombre": "Honorarios"},
+    "5111": {"concepto": "5003", "nombre": "Comisiones"},
+    "5115": {"concepto": "5004", "nombre": "Servicios"},
+    "5120": {"concepto": "5007", "nombre": "Arrendamientos"},
+    "5135": {"concepto": "5004", "nombre": "Servicios"},
+    "5140": {"concepto": "5010", "nombre": "Gastos legales"},
+    "5145": {"concepto": "5004", "nombre": "Mantenimiento y reparaciones"},
+    "5155": {"concepto": "5004", "nombre": "Gastos de viaje"},
+    "5305": {"concepto": "5006", "nombre": "Intereses y rendimientos financieros"},
+    "6135": {"concepto": "5016", "nombre": "Compra de bienes y/o servicios"},
+    "1435": {"concepto": "5016", "nombre": "Compra de activos movibles - inventarios"},
+    "1524": {"concepto": "5020", "nombre": "Compra de activos fijos"}
+  },
+  "cuentas_retencion": {
+    "retencion_renta": "2365",
+    "retencion_iva": "2367",
+    "retencion_ica": "2368"
+  },
+  "topes": {
+    "nota": "Los topes minimos por concepto los fija cada ano la resolucion de informacion exogena. Ajuste este valor y valide contra la resolucion vigente.",
+    "tope_general_por_tercero": 100000
+  }
+}

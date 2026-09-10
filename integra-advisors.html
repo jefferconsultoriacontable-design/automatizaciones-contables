@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Integra Advisors | Asesoría Contable · Jeffer Pacheco</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0a1628;
+    --navy-mid: #112240;
+    --navy-light: #1a3560;
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --gold-pale: #f5e6b8;
+    --cream: #faf7f0;
+    --white: #ffffff;
+    --text-main: #e8e4da;
+    --text-muted: #8fa3bb;
+    --green: #2ecc8a;
+    --red-soft: #ff6b6b;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--navy);
+    color: var(--text-main);
+    overflow-x: hidden;
+    line-height: 1.65;
+  }
+
+  /* ── NOISE TEXTURE OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.6;
+  }
+
+  /* ── TYPOGRAPHY ── */
+  h1, h2, h3 { font-family: 'Playfair Display', serif; }
+  h1 { font-size: clamp(2.2rem, 5.5vw, 4rem); line-height: 1.1; font-weight: 900; }
+  h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); line-height: 1.2; font-weight: 700; }
+  h3 { font-size: 1.25rem; font-weight: 700; }
+
+  /* ── LAYOUT ── */
+  .container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  section { padding: 96px 0; position: relative; }
+
+  /* ── GOLD LINE ACCENT ── */
+  .gold-rule {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    margin-bottom: 24px;
+    border-radius: 2px;
+  }
+
+  /* ── BUTTONS ── */
+  .btn-wa {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #25d366, #1ebe5d);
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 24px rgba(37,211,102,0.35);
+    transition: transform 0.2s, box-shadow 0.2s;
+    letter-spacing: 0.01em;
+  }
+  .btn-wa:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(37,211,102,0.5); }
+
+  .btn-wa-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    border: 2px solid var(--gold);
+    color: var(--gold-light);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 14px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+  }
+  .btn-wa-ghost:hover { background: var(--gold); color: var(--navy); transform: translateY(-2px); }
+
+  .wa-icon { font-size: 1.25rem; }
+
+  /* ═══════════════════════════════════
+     HERO
+  ═══════════════════════════════════ */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 120px 0 80px;
+    background:
+      radial-gradient(ellipse 80% 60% at 70% 50%, rgba(201,168,76,0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 80% at 10% 20%, rgba(17,34,64,0.9) 0%, transparent 60%),
+      var(--navy);
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.35);
+    color: var(--gold-light);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 50px;
+    margin-bottom: 28px;
+  }
+
+  #hero h1 { color: var(--white); margin-bottom: 28px; }
+  #hero h1 em { font-style: normal; color: var(--gold-light); }
+
+  .hero-sub {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 560px;
+    margin-bottom: 16px;
+    font-weight: 300;
+  }
+
+  .hero-cta-note {
+    font-size: 0.92rem;
+    color: var(--gold);
+    margin-bottom: 36px;
+    font-weight: 500;
+  }
+
+  .hero-cta-note strong { color: var(--gold-light); }
+
+  /* floating gold orb */
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+  }
+  .orb-1 { width: 500px; height: 500px; background: rgba(201,168,76,0.07); top: -100px; right: -100px; }
+  .orb-2 { width: 300px; height: 300px; background: rgba(17,34,64,0.5); bottom: 0; right: 200px; }
+
+  /* decorative number */
+  .hero-deco {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(160px, 25vw, 300px);
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(201,168,76,0.08);
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  /* ═══════════════════════════════════
+     PROBLEMA
+  ═══════════════════════════════════ */
+  #problema { background: var(--navy-mid); }
+
+  .problema-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 40px 0 48px;
+  }
+
+  .problema-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: rgba(255,107,107,0.06);
+    border: 1px solid rgba(255,107,107,0.15);
+    border-radius: 12px;
+    padding: 20px;
+  }
+
+  .problema-icon {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .problema-text { font-size: 0.97rem; color: var(--text-main); line-height: 1.5; }
+
+  .problema-warning {
+    background: rgba(201,168,76,0.08);
+    border-left: 4px solid var(--gold);
+    border-radius: 0 8px 8px 0;
+    padding: 18px 24px;
+    font-size: 1rem;
+    color: var(--gold-pale);
+    margin-bottom: 40px;
+  }
+
+  /* ═══════════════════════════════════
+     SOLUCIÓN
+  ═══════════════════════════════════ */
+  #solucion {
+    background:
+      radial-gradient(ellipse 70% 50% at 30% 50%, rgba(201,168,76,0.06) 0%, transparent 70%),
+      var(--navy);
+  }
+
+  .solucion-intro {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 580px;
+    margin-bottom: 48px;
+  }
+
+  .solucion-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .check-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 20px;
+    background: rgba(46,204,138,0.07);
+    border: 1px solid rgba(46,204,138,0.2);
+    border-radius: 10px;
+    font-weight: 500;
+  }
+
+  .check-item .check { color: var(--green); font-size: 1.2rem; }
+
+  /* ═══════════════════════════════════
+     SERVICIOS
+  ═══════════════════════════════════ */
+  #servicios { background: var(--navy-mid); }
+
+  .servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin: 48px 0;
+  }
+
+  .servicio-card {
+    background: var(--navy);
+    border: 1px solid rgba(201,168,76,0.15);
+    border-radius: 16px;
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+
+  .servicio-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+
+  .servicio-card:hover { border-color: rgba(201,168,76,0.4); transform: translateY(-4px); }
+  .servicio-card:hover::before { transform: scaleX(1); }
+
+  .servicio-emoji { font-size: 2.2rem; margin-bottom: 16px; display: block; }
+  .servicio-card h3 { color: var(--gold-light); margin-bottom: 10px; }
+  .servicio-card p { color: var(--text-muted); font-size: 0.95rem; }
+
+  /* ═══════════════════════════════════
+     DIFERENCIAL
+  ═══════════════════════════════════ */
+  #diferencial {
+    background:
+      linear-gradient(180deg, var(--navy) 0%, var(--navy-mid) 100%);
+  }
+
+  .diferencial-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    margin-top: 48px;
+  }
+
+  .diferencial-list { list-style: none; }
+  .diferencial-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+  .diferencial-list li .bullet {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+    font-size: 0.7rem;
+    color: var(--navy);
+    font-weight: 900;
+  }
+
+  .diferencial-quote {
+    background: linear-gradient(135deg, rgba(201,168,76,0.1), rgba(201,168,76,0.04));
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+  }
+
+  .diferencial-quote .fire { font-size: 3rem; margin-bottom: 20px; }
+  .diferencial-quote p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    line-height: 1.45;
+    color: var(--gold-pale);
+  }
+
+  /* ═══════════════════════════════════
+     CONFIANZA
+  ═══════════════════════════════════ */
+  #confianza { background: var(--navy); text-align: center; }
+
+  .confianza-copy {
+    max-width: 640px;
+    margin: 24px auto 40px;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+  }
+
+  .confianza-highlight {
+    display: inline-block;
+    background: rgba(201,168,76,0.1);
+    border: 1px solid rgba(201,168,76,0.25);
+    color: var(--gold-pale);
+    border-radius: 10px;
+    padding: 14px 28px;
+    font-size: 1rem;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  /* ═══════════════════════════════════
+     CTA FINAL
+  ═══════════════════════════════════ */
+  #cta-final {
+    background:
+      radial-gradient(ellipse 100% 80% at 50% 50%, rgba(201,168,76,0.12) 0%, transparent 70%),
+      var(--navy-mid);
+    text-align: center;
+    padding: 120px 0;
+  }
+
+  #cta-final h2 { color: var(--white); margin-bottom: 16px; }
+  .cta-sub { color: var(--text-muted); font-size: 1.05rem; max-width: 520px; margin: 0 auto 16px; }
+  .cta-rocket { font-size: 1rem; color: var(--gold); margin-bottom: 40px; }
+  .btn-wa-big {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #25d366, #1ebe5d);
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    padding: 20px 48px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 6px 40px rgba(37,211,102,0.45);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .btn-wa-big:hover { transform: translateY(-3px); box-shadow: 0 12px 50px rgba(37,211,102,0.55); }
+
+  /* ═══════════════════════════════════
+     FOOTER
+  ═══════════════════════════════════ */
+  footer {
+    background: #060e1c;
+    border-top: 1px solid rgba(201,168,76,0.12);
+    padding: 48px 0;
+    text-align: center;
+  }
+
+  .footer-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--gold-light);
+    margin-bottom: 6px;
+  }
+
+  .footer-title { color: var(--text-muted); font-size: 0.88rem; margin-bottom: 24px; }
+
+  .footer-contacts { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; }
+  .footer-contacts a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.92rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s;
+  }
+  .footer-contacts a:hover { color: var(--gold-light); }
+
+  .footer-copy {
+    margin-top: 32px;
+    font-size: 0.78rem;
+    color: rgba(143,163,187,0.4);
+  }
+
+  /* ── STICKY WA BUTTON ── */
+  .sticky-wa {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 999;
+    background: #25d366;
+    color: #fff;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    text-decoration: none;
+    box-shadow: 0 4px 24px rgba(37,211,102,0.5);
+    transition: transform 0.2s;
+  }
+  .sticky-wa:hover { transform: scale(1.1); }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate { opacity: 0; }
+  .animate.visible { animation: fadeUp 0.7s ease forwards; }
+  .delay-1 { animation-delay: 0.1s !important; }
+  .delay-2 { animation-delay: 0.2s !important; }
+  .delay-3 { animation-delay: 0.35s !important; }
+  .delay-4 { animation-delay: 0.5s !important; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 700px) {
+    .problema-grid,
+    .solucion-list,
+    .servicios-grid,
+    .diferencial-cols { grid-template-columns: 1fr; }
+    .hero-deco { display: none; }
+    section { padding: 72px 0; }
+    .footer-contacts { gap: 16px; flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- STICKY WA -->
+<a class="sticky-wa" href="https://wa.me/573125314968?text=Hola%2C%20vi%20tu%20p%C3%A1gina%20y%20quiero%20informaci%C3%B3n%20sobre%20asesor%C3%ADa%20contable." target="_blank" title="WhatsApp">💬</a>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section id="hero">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="hero-deco">$</div>
+  <div class="container">
+    <div class="hero-badge">Asesoría Contable Estratégica · Yopal, Casanare</div>
+    <h1 class="animate">¿Tu negocio está pagando <em>más impuestos</em> de lo que debería?</h1>
+    <p class="hero-sub animate delay-1">Organiza tus finanzas, paga lo justo y haz crecer tu negocio con asesoría contable clara y sin enredos.</p>
+    <p class="hero-cta-note animate delay-2"><strong>👉 Convierte tu contabilidad en una herramienta para ganar más dinero,</strong> no solo para cumplir.</p>
+    <a class="btn-wa animate delay-3" href="https://wa.me/573125314968?text=Hola%2C%20vi%20tu%20p%C3%A1gina%20y%20quiero%20informaci%C3%B3n%20sobre%20asesor%C3%ADa%20contable." target="_blank">
+      <span class="wa-icon">💬</span> Hablar por WhatsApp ahora
+    </a>
+  </div>
+</section>
+
+<!-- ══════════════ PROBLEMA ══════════════ -->
+<section id="problema">
+  <div class="container">
+    <div class="gold-rule animate"></div>
+    <h2 class="animate">Sabemos lo que estás viviendo…</h2>
+    <div class="problema-grid animate delay-1">
+      <div class="problema-item">
+        <span class="problema-icon">❌</span>
+        <span class="problema-text">No entiendes realmente tus números y tomas decisiones a ciegas</span>
+      </div>
+      <div class="problema-item">
+        <span class="problema-icon">❌</span>
+        <span class="problema-text">Pagas impuestos sin claridad sobre si estás pagando de más</span>
+      </div>
+      <div class="problema-item">
+        <span class="problema-icon">❌</span>
+        <span class="problema-text">No sabes con certeza si tu negocio está ganando o perdiendo</span>
+      </div>
+      <div class="problema-item">
+        <span class="problema-icon">❌</span>
+        <span class="problema-text">La DIAN te genera estrés constante y miedo a sanciones</span>
+      </div>
+    </div>
+    <div class="problema-warning animate delay-2">
+      👉 <strong>Y lo peor…</strong> eso te está costando dinero todos los meses sin que te des cuenta.
+    </div>
+    <a class="btn-wa-ghost animate delay-3" href="https://wa.me/573125314968?text=Hola%2C%20vi%20tu%20p%C3%A1gina%20y%20quiero%20informaci%C3%B3n%20sobre%20asesor%C3%ADa%20contable." target="_blank">
+      <span>💬</span> Necesito asesoría contable
+    </a>
+  </div>
+</section>
+
+<!-- ══════════════ SOLUCIÓN ══════════════ -->
+<section id="solucion">
+  <div class="container">
+    <div class="gold-rule animate"></div>
+    <h2 class="animate">Aquí es donde <em style="font-style:italic;color:var(--gold-light)">todo cambia</em></h2>
+    <p class="solucion-intro animate delay-1">En <strong>Integra Advisors</strong> y con <strong>Jeffer Pacheco</strong>, transformamos tu contabilidad en información clara para tomar decisiones que hagan crecer tu negocio.</p>
+    <div class="solucion-list animate delay-2">
+      <div class="check-item"><span class="check">✔</span> Control total de tus finanzas</div>
+      <div class="check-item"><span class="check">✔</span> Reducción de impuestos (legalmente)</div>
+      <div class="check-item"><span class="check">✔</span> Decisiones basadas en datos reales</div>
+      <div class="check-item"><span class="check">✔</span> Tranquilidad total frente a la DIAN</div>
+    </div>
+    <a class="btn-wa animate delay-3" href="https://wa.me/573125314968?text=Hola%2C%20vi%20tu%20p%C3%A1gina%20y%20quiero%20informaci%C3%B3n%20sobre%20asesor%C3%ADa%20contable." target="_blank">
+      <span class="wa-icon">💬</span> Quiero organizar mis finanzas
+    </a>
+  </div>
+</section>
+
+<!-- ══════════════ SERVICIOS ══════════════ -->
+<section id="servicios">
+  <div class="container">
+    <div class="gold-rule animate"></div>
+    <h2 class="animate">Servicios diseñados para hacer crecer tu negocio</h2>
+    <div class="servicios-grid">
+      <div class="servicio-card animate delay-1">
+        <span class="servicio-emoji">📊</span>
+        <h3>Contabilidad Integral</h3>
+        <p>Llevamos tu contabilidad al día, organizada y sin errores, para que tengas claridad en todo momento.</p>
+      </div>
+      <div class="servicio-card animate delay-2">
+        <span class="servicio-emoji">📈</span>
+        <h3>Asesoría Financiera</h3>
+        <p>Te mostramos con claridad cómo está tu negocio y qué decisiones tomar para mejorar tu rentabilidad.</p>
+      </div>
+      <div class="servicio-card animate delay-2">
+        <span class="servicio-emoji">🧾</span>
+        <h3>Planeación Tributaria</h3>
+        <p>Optimizamos tus impuestos para que pagues lo justo, no de más. Con estrategia y dentro de la ley.</p>
+      </div>
+      <div class="servicio-card animate delay-3">
+        <span class="servicio-emoji">🏛️</span>
+        <h3>Acompañamiento DIAN</h3>
+        <p>Te respaldamos ante requerimientos y actuamos proactivamente para evitar sanciones y multas.</p>
+      </div>
+    </div>
+    <a class="btn-wa animate delay-4" href="https://wa.me/573125314968?text=Hola%2C%20vi%20tu%20p%C3%A1gina%20y%20quiero%20informaci%C3%B3n%20sobre%20asesor%C3%ADa%20contable." target="_blank">
+      <span class="wa-icon">💬</span> Cotizar por WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- ══════════════ DIFERENCIAL ══════════════ -->
+<section id="diferencial">
+  <div class="container">
+    <div class="gold-rule animate"></div>
+    <h2 class="animate">¿Por qué trabajar con nosotros?</h2>
+    <div class="diferencial-cols">
+      <div>
+        <ul class="diferencial-list">
+          <li class="animate delay-1">
+            <span class="bullet">✓</span>
+            <span>No hablamos complicado — te explicamos todo en lenguaje claro</span>
+          </li>
+          <li class="animate delay-2">
+            <span class="bullet">✓</span>
+            <span>Nos enfocamos en que tu negocio crezca, no solo en cumplir</span>
+          </li>
+          <li class="animate delay-2">
+            <span class="bullet">✓</span>
+            <span>Atención directa contigo, sin intermediarios ni terceros</span>
+          </li>
+          <li class="animate delay-3">
+            <span class="bullet">✓</span>
+            <span>Experiencia real con negocios como el tuyo en Casanare</span>
+          </li>
+        </ul>
+        <a class="btn-wa animate delay-4" style="margin-top:16px" href="https://wa.me/573125314968?text=Hola%2C%20vi%20tu%20p%C3%A1gina%20y%20quiero%20informaci%C3%B3n%20sobre%20asesor%C3%ADa%20contable." target="_blank">
+          <span class="wa-icon">💬</span> Hablar con un asesor
+        </a>
+      </div>
+      <div class="diferencial-quote animate delay-2">
+        <div class="fire">🔥</div>
+        <p>Tu contador no debería ser un gasto… debería ser una <strong style="color:var(--gold-light)">inversión</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CONFIANZA ══════════════ -->
+<section id="confianza">
+  <div class="container">
+    <div class="gold-rule animate" style="margin: 0 auto 24px;"></div>
+    <h2 class="animate">Trabajamos con negocios que quieren <em style="font-style:italic;color:var(--gold-light)">crecer de verdad</em></h2>
+    <p class="confianza-copy animate delay-1">Acompañamos emprendedores, comerciantes y empresas que buscan orden, claridad y resultados reales en sus finanzas.</p>
+    <div class="confianza-highlight animate delay-2">
+      👉 Si quieres dejar de improvisar con tus números, estás en el lugar correcto.
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CTA FINAL ══════════════ -->
+<section id="cta-final">
+  <div class="container">
+    <h2 class="animate">Deja de adivinar tus números</h2>
+    <p class="cta-sub animate delay-1">Empieza hoy a tener control real de tu negocio y toma decisiones con seguridad.</p>
+    <p class="cta-rocket animate delay-2">🚀 Tu crecimiento financiero comienza con una buena asesoría.</p>
+    <a class="btn-wa-big animate delay-3" href="https://wa.me/573125314968?text=Hola%2C%20vi%20tu%20p%C3%A1gina%20y%20quiero%20informaci%C3%B3n%20sobre%20asesor%C3%ADa%20contable." target="_blank">
+      <span style="font-size:1.4rem">💬</span> Escríbeme por WhatsApp ahora
+    </a>
+  </div>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer>
+  <div class="container">
+    <p class="footer-name">Jeffer Pacheco</p>
+    <p class="footer-title">Contador Público · Integra Advisors</p>
+    <div class="footer-contacts">
+      <a href="https://wa.me/573125314968" target="_blank">
+        <span>📲</span> 312 531 4968
+      </a>
+      <a href="#">
+        <span>📍</span> Yopal – Casanare, Colombia
+      </a>
+    </div>
+    <p class="footer-copy">© 2025 Integra Advisors · Todos los derechos reservados</p>
+  </div>
+</footer>
+
+<script>
+  // Intersection Observer for scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(el => {
+      if (el.isIntersecting) {
+        el.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+fecha,referencia,descripcion,debito,credito
+2026-01-01,RC-0001,Recaudo cliente,8581000.0,0.0
+2026-01-01,RC-0002,Recaudo cliente,2759000.0,0.0
+2026-01-05,RC-0003,Recaudo cliente,2717000.0,0.0
+2026-01-06,RC-0004,Recaudo cliente,8008000.0,0.0
+2026-01-07,CE-0001,Pago factura proveedor,0.0,3315000.0
+2026-01-07,RC-0005,Recaudo cliente,5208000.0,0.0
+2026-01-07,RC-0006,Recaudo cliente,7485000.0,0.0
+2026-01-08,RC-0007,Recaudo cliente,2119000.0,0.0
+2026-01-09,CE-0002,Pago factura proveedor,0.0,6456000.0
+2026-01-09,RC-0008,Recaudo cliente,3979000.0,0.0
+2026-01-09,RC-0009,Recaudo cliente,5363000.0,0.0
+2026-01-12,CE-0003,Pago factura proveedor,0.0,5011000.0
+2026-01-12,RC-0010,Recaudo cliente,2548000.0,0.0
+2026-01-12,RC-0011,Recaudo cliente,5970000.0,0.0
+2026-01-13,RC-0012,Recaudo cliente,6969000.0,0.0
+2026-01-13,RC-0013,Recaudo cliente,2075000.0,0.0
+2026-01-14,CE-0004,Pago factura proveedor,0.0,4805000.0
+2026-01-14,RC-0014,Recaudo cliente,1500000.0,0.0
+2026-01-14,RC-0015,Recaudo cliente,3296000.0,0.0
+2026-01-15,CE-0005,Pago factura proveedor,0.0,4392000.0
+2026-01-15,RC-0016,Recaudo cliente,2140000.0,0.0
+2026-01-16,CE-0006,Pago factura proveedor,0.0,5619000.0
+2026-01-16,RC-0017,Recaudo cliente,6676000.0,0.0
+2026-01-19,RC-0018,Recaudo cliente,4746000.0,0.0
+2026-01-20,CE-0007,Pago factura proveedor,0.0,933000.0
+2026-01-20,CE-0028,Energia,0.0,319000.0
+2026-01-20,CE-0029,Internet y telefonia,0.0,652000.0
+2026-01-20,CE-0030,Aseo y vigilancia,0.0,376000.0
+2026-01-22,CE-0008,Pago factura proveedor,0.0,5137000.0
+2026-01-22,RC-0019,Recaudo cliente,7155000.0,0.0
+2026-01-22,RC-0020,Recaudo cliente,6569000.0,0.0
+2026-01-26,CE-0009,Pago factura proveedor,0.0,5070000.0
+2026-01-26,RC-0021,Recaudo cliente,5011000.0,0.0
+2026-01-27,CE-0010,Pago factura proveedor,0.0,6823000.0
+2026-01-27,RC-0022,Recaudo cliente,3462000.0,0.0
+2026-01-27,RC-0023,Recaudo cliente,5215000.0,0.0
+2026-01-28,RC-0024,Recaudo cliente,1753000.0,0.0
+2026-01-29,CE-0011,Pago factura proveedor,0.0,2162000.0
+2026-01-29,RC-0025,Recaudo cliente,2269000.0,0.0
+2026-01-30,RC-0026,Recaudo cliente,6855000.0,0.0
+2026-02-02,CE-0012,Pago factura proveedor,0.0,2576000.0
+2026-02-02,RC-0027,Recaudo cliente,4857000.0,0.0
+2026-02-02,RC-0028,Recaudo cliente,1476000.0,0.0
+2026-02-04,RC-0029,Recaudo cliente,7912000.0,0.0
+2026-02-05,RC-0030,Recaudo cliente,3693000.0,0.0
+2026-02-05,RC-0031,Recaudo cliente,2341000.0,0.0
+2026-02-06,RC-0032,Recaudo cliente,8119000.0,0.0
+2026-02-06,RC-0033,Recaudo cliente,4463000.0,0.0
+2026-02-09,RC-0034,Recaudo cliente,2633000.0,0.0
+2026-02-09,RC-0035,Recaudo cliente,2975000.0,0.0
+2026-02-11,CE-0013,Pago factura proveedor,0.0,2801000.0
+2026-02-11,RC-0036,Recaudo cliente,2742000.0,0.0
+2026-02-11,RC-0037,Recaudo cliente,2298000.0,0.0
+2026-02-12,CE-0014,Pago factura proveedor,0.0,6958000.0
+2026-02-12,RC-0038,Recaudo cliente,6907000.0,0.0
+2026-02-12,RC-0039,Recaudo cliente,4763000.0,0.0
+2026-02-13,RC-0040,Recaudo cliente,8933000.0,0.0
+2026-02-16,RC-0041,Recaudo cliente,8660000.0,0.0
+2026-02-17,RC-0042,Recaudo cliente,4946000.0,0.0
+2026-02-17,RC-0043,Recaudo cliente,8198000.0,0.0
+2026-02-18,CE-0015,Pago factura proveedor,0.0,1097000.0
+2026-02-19,CE-0016,Pago factura proveedor,0.0,1747000.0
+2026-02-19,RC-0044,Recaudo cliente,1949000.0,0.0
+2026-02-19,RC-0045,Recaudo cliente,3899000.0,0.0
+2026-02-20,CE-0031,Energia,0.0,1065000.0
+2026-02-20,CE-0032,Internet y telefonia,0.0,1070000.0
+2026-02-20,CE-0033,Aseo y vigilancia,0.0,433000.0
+2026-02-20,RC-0046,Recaudo cliente,6635000.0,0.0
+2026-02-20,RC-0047,Recaudo cliente,1943000.0,0.0
+2026-02-24,CE-0017,Pago factura proveedor,0.0,5022000.0
+2026-02-25,RC-0048,Recaudo cliente,2550000.0,0.0
+2026-02-25,RC-0049,Recaudo cliente,1249000.0,0.0
+2026-02-26,CE-0018,Pago factura proveedor,0.0,6128000.0
+2026-02-26,RC-0050,Recaudo cliente,6309000.0,0.0
+2026-02-26,RC-0051,Recaudo cliente,3352000.0,0.0
+2026-02-27,RC-0052,Recaudo cliente,4262000.0,0.0
+2026-02-27,RC-0053,Recaudo cliente,4904000.0,0.0
+2026-03-02,RC-0054,Recaudo cliente,8264000.0,0.0
+2026-03-02,RC-0055,Recaudo cliente,7885000.0,0.0
+2026-03-03,CE-0019,Pago factura proveedor,0.0,6140000.0
+2026-03-03,RC-0056,Recaudo cliente,2130000.0,0.0
+2026-03-04,CE-0020,Pago factura proveedor,0.0,859000.0
+2026-03-05,CE-0021,Pago factura proveedor,0.0,4661000.0
+2026-03-06,RC-0057,Recaudo cliente,8943000.0,0.0
+2026-03-06,RC-0058,Recaudo cliente,4735000.0,0.0
+2026-03-09,CE-0022,Pago factura proveedor,0.0,2172000.0
+2026-03-09,RC-0059,Recaudo cliente,6185000.0,0.0
+2026-03-10,RC-0060,Recaudo cliente,8624000.0,0.0
+2026-03-10,RC-0061,Recaudo cliente,3672000.0,0.0
+2026-03-11,RC-0062,Recaudo cliente,4776000.0,0.0
+2026-03-12,RC-0063,Recaudo cliente,5473000.0,0.0
+2026-03-13,RC-0064,Recaudo cliente,8752000.0,0.0
+2026-03-13,RC-0065,Recaudo cliente,7664000.0,0.0
+2026-03-16,CE-0023,Pago factura proveedor,0.0,2670000.0
+2026-03-16,RC-0066,Recaudo cliente,1304000.0,0.0
+2026-03-18,RC-0067,Recaudo cliente,1575000.0,0.0
+2026-03-18,RC-0068,Recaudo cliente,8557000.0,0.0
+2026-03-19,CE-0024,Pago factura proveedor,0.0,4187000.0
+2026-03-19,RC-0069,Recaudo cliente,1891000.0,0.0
+2026-03-20,CE-0025,Pago factura proveedor,0.0,4413000.0
+2026-03-20,CE-0034,Energia,0.0,880000.0
+2026-03-20,CE-0035,Internet y telefonia,0.0,1183000.0
+2026-03-20,CE-0036,Aseo y vigilancia,0.0,829000.0
+2026-03-20,RC-0070,Recaudo cliente,8859000.0,0.0
+2026-03-23,RC-0071,Recaudo cliente,4920000.0,0.0
+2026-03-24,CE-0026,Pago factura proveedor,0.0,2148000.0
+2026-03-24,RC-0072,Recaudo cliente,2254000.0,0.0
+2026-03-24,RC-0073,Recaudo cliente,2100000.0,0.0
+2026-03-27,CE-0027,Pago factura proveedor,0.0,6093000.0
+2026-03-27,RC-0074,Recaudo cliente,2377000.0,0.0
+2026-03-30,RC-0075,Recaudo cliente,1149000.0,0.0
+2026-03-30,RC-0076,Recaudo cliente,7135000.0,0.0

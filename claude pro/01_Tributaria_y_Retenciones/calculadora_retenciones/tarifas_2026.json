@@ -1,0 +1,55 @@
+{
+  "vigencia": 2026,
+  "uvt": 52374,
+  "fuente_uvt": "DIAN - valor UVT 2026: $52.374",
+  "advertencia": "Verifique tarifas y bases contra la norma vigente y el acuerdo municipal de ICA antes de usar en produccion. Ultima revision: septiembre 2026.",
+  "iva_general": 0.19,
+  "retefuente": {
+    "compras_generales_declarante":      {"tarifa": 0.025,  "base_uvt": 27, "descripcion": "Compras generales (declarante)"},
+    "compras_generales_no_declarante":   {"tarifa": 0.035,  "base_uvt": 27, "descripcion": "Compras generales (no declarante)"},
+    "servicios_generales_declarante":    {"tarifa": 0.04,   "base_uvt": 4,  "descripcion": "Servicios generales (declarante)"},
+    "servicios_generales_no_declarante": {"tarifa": 0.06,   "base_uvt": 4,  "descripcion": "Servicios generales (no declarante)"},
+    "honorarios_pj":                     {"tarifa": 0.11,   "base_uvt": 0,  "descripcion": "Honorarios y comisiones persona juridica"},
+    "honorarios_pn":                     {"tarifa": 0.10,   "base_uvt": 0,  "descripcion": "Honorarios y comisiones persona natural"},
+    "arrendamiento_inmuebles":           {"tarifa": 0.035,  "base_uvt": 27, "descripcion": "Arrendamiento bienes inmuebles"},
+    "arrendamiento_muebles":             {"tarifa": 0.04,   "base_uvt": 0,  "descripcion": "Arrendamiento bienes muebles"},
+    "transporte_carga":                  {"tarifa": 0.01,   "base_uvt": 4,  "descripcion": "Servicio de transporte de carga"},
+    "transporte_pasajeros":              {"tarifa": 0.035,  "base_uvt": 27, "descripcion": "Transporte terrestre de pasajeros"},
+    "vigilancia_y_aseo_aiu":             {"tarifa": 0.02,   "base_uvt": 4,  "descripcion": "Vigilancia y aseo (sobre AIU)"},
+    "servicios_temporales_aiu":          {"tarifa": 0.01,   "base_uvt": 4,  "descripcion": "Servicios temporales de empleo (sobre AIU)"},
+    "hoteles_restaurantes":              {"tarifa": 0.035,  "base_uvt": 4,  "descripcion": "Hoteles, restaurantes y hospedaje"},
+    "contratos_construccion":            {"tarifa": 0.02,   "base_uvt": 27, "descripcion": "Contratos de construccion y urbanizacion"},
+    "rendimientos_financieros":          {"tarifa": 0.07,   "base_uvt": 0,  "descripcion": "Rendimientos financieros"},
+    "loterias_rifas_apuestas":           {"tarifa": 0.20,   "base_uvt": 48, "descripcion": "Loterias, rifas y apuestas"},
+    "compra_bienes_raices_vivienda":     {"tarifa": 0.01,   "base_uvt": 0,  "descripcion": "Compra de bien raiz para vivienda (hasta 20.000 UVT)"},
+    "no_aplica":                         {"tarifa": 0.0,    "base_uvt": 0,  "descripcion": "Sin retencion en la fuente"}
+  },
+  "reteiva": {
+    "tarifa": 0.15,
+    "descripcion": "15% del IVA facturado",
+    "base_uvt_compras": 27,
+    "base_uvt_servicios": 4
+  },
+  "reteica": {
+    "municipio_por_defecto": "YOPAL",
+    "tarifas_por_mil": {
+      "comercio_al_por_mayor_y_menor": 9.66,
+      "servicios_generales": 9.66,
+      "construccion": 9.66,
+      "industrial": 7.0,
+      "financiero": 5.0
+    },
+    "base_uvt": 0,
+    "nota": "El ICA es municipal: reemplace estas tarifas por las del acuerdo del municipio donde se realiza la actividad."
+  },
+  "autorretencion_renta": {
+    "descripcion": "Autorretencion especial en renta (Decreto 2201 de 2016) - sobre ingresos brutos",
+    "tarifas": {
+      "comercio_al_por_mayor_y_menor": 0.004,
+      "servicios": 0.004,
+      "construccion": 0.006,
+      "industria_manufacturera": 0.004,
+      "actividades_financieras": 0.008
+    }
+  }
+}
